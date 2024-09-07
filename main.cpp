@@ -17,8 +17,6 @@ int main()
     }
     
     
-    
-
     window = SDL_CreateWindow("Hello", 0 , 250, 640,480, SDL_WINDOW_SHOWN);
     if (window == NULL)
     {
