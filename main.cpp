@@ -23,7 +23,23 @@ int main()
         cout<< "Could not create window " <<SDL_GetError();
         return 1;
     }
-    SDL_Delay(3000);
+
+    bool gameIsRunning = true;
+
+    while(gameIsRunning)
+    {
+        SDL_Event event;
+        //Start our event loop
+        while (SDL_PollEvent(&event))
+        {
+            //Handle each specific event
+            if(event.type == SDL_QUIT)
+            {
+                gameIsRunning = false;
+            }
+        }
+        
+    }
 
     SDL_DestroyWindow(window);
     
